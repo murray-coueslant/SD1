@@ -13,5 +13,7 @@ public class ch2_2_5 {
         double gratuity = subtotal * (gratuity_rate / 100);
         double total = subtotal + gratuity;
         System.out.println("The gratuity is $"+df.format(gratuity)+" and the total is $"+df.format(total)+".");
+        input.close();
+
     }
 }
