@@ -9,6 +9,7 @@ public class ch3_3_17 {
         System.out.print("Enter your selection: ");
         int userSelection = input.nextInt();
         int computerSelection = rand.nextInt(3);
+        input.close();
         switch (userSelection) {
             case 0:
                 if (computerSelection == 0){
@@ -40,5 +41,6 @@ public class ch3_3_17 {
             default:
                 break;
         }
+
     }
 }
