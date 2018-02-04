@@ -40,6 +40,10 @@ public class ch3_3_5 {
             case 6: futureDayString = "Saturday"; break;
         }
         input.close();
-        System.out.println("Today is " + dayString + " and " + futureVal + " days from now will be " + futureDayString);
+        if(futureVal==1){
+            System.out.println("Today is " + dayString + " and " + futureVal + " day from now will be " + futureDayString);
+        } else {
+            System.out.println("Today is " + dayString + " and " + futureVal + " days from now will be " + futureDayString);
+        }
     }
 }
