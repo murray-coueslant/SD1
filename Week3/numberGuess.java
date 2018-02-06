@@ -9,6 +9,7 @@ public class numberGuess{
             int userNum = input.nextInt();
             if(userNum == secretNum){
                 System.out.println("You guessed right!");
+                break;
             } else if (userNum > secretNum){
                 System.out.println("Try again, your guess was larger than my number.");
             } else {
