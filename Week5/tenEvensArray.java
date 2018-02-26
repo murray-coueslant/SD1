@@ -14,10 +14,10 @@ public class tenEvensArray {
 
         String outString = "";
 
-        for(int i = 0; i < firstTenEvens.length; i++){
-            outString += firstTenEvens[i] + " ";
+        for(int i : firstTenEvens){
+            outString += i + " ";
         }
-        
+
         System.out.println(outString);
     }
 }
