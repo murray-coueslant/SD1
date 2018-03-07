@@ -9,7 +9,7 @@ public class ch1_1_11 {
         System.out.println("The current population is: 312,032,486");
         int current_pop = 312032486;
         int seconds_in_day = 86400;
-        int days_in_year = 365;
+        FINAL int days_in_year = 365;
         int birth_rate = 7;
         int death_rate = 13;
         int immi_rate = 45;
