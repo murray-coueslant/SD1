@@ -27,18 +27,74 @@ a balance of $20,000, and an annual interest rate of 4.5%. Use the withdraw meth
 withdraw $2,500, use the deposit method to deposit $3,000, and print the balance, the monthly interest, 
 and the date when this account was created.
 */
+import java.util.Date;
 
-public class ch9_9_7 {
-    public static void main(String args[]){
-        Account testAccount = new Account(1122, 20000);
-        testAccount.setAnnualInterest(4.5);
-        testAccount.withdraw(2500);
-        testAccount.deposit(3000);
-        System.out.println("--------------------------------------");
-        System.out.println("Details for account ID: " + testAccount.getId());
-        System.out.println("Account balance: $" + testAccount.getBalance());
-        System.out.println("Account monthly interest: $" + testAccount.getMonthlyInterest());
-        System.out.println("Account creation date: " + testAccount.getDateCreated());
-        System.out.println("--------------------------------------");
+public class Account {
+    private int id;
+    private double balance;
+    private double annualInterestRate;
+    private Date dateCreated;
+
+    public Account(){
+        id = 0;
+        balance = 0;
+        annualInterestRate = 0;
+        dateCreated = new Date();
     }
+
+    public Account(int inId, double inBalance){
+      id = inId;
+      balance = inBalance;
+      annualInterestRate = 0;
+      dateCreated = new Date();
+    }
+
+    public int getId(){
+      return this.id;
+    }
+
+    public void setId(int inId){
+      this.id = inId;
+    }
+
+    public double getBalance(){
+      return this.balance;
+    }
+
+    public void setBalance(double inBalance){
+      this.balance = inBalance;
+    }
+
+    public double getAnnualInterest(){
+      return this.annualInterestRate;
+    }
+
+    public void setAnnualInterest(double inAnnualInterest){
+      this.annualInterestRate = inAnnualInterest;
+    }
+
+    public Date getDateCreated(){
+      return this.dateCreated;
+    }
+
+    public double getMonthlyInterestRate(){
+      double monthlyInterestRate = ((this.annualInterestRate / 100) / 12) * 100;
+      return monthlyInterestRate;
+    }
+
+    public double getMonthlyInterest(){
+      double monthlyInterest = this.balance * (((this.annualInterestRate / 100) / 12) * 100);
+      return monthlyInterest;
+    }
+
+    public double withdraw(double withdrawAmount){
+      this.balance -= withdrawAmount;
+      return this.balance;
+    }
+
+    public double deposit(double depositAmount){
+      this.balance += depositAmount;
+      return this.balance;
+    }
+
 }
