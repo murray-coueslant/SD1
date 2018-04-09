@@ -4,9 +4,13 @@ public class Dog extends Animal {
         this.setDiet("omnivore");
     }
 
-    public void barks(){
+    public void barks(Dog dog){
         System.out.println("woof");
     }
 
 
+}
+
+public static void main(String args[]){
+    System.out.println();
 }
