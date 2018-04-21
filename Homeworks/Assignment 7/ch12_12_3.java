@@ -10,7 +10,7 @@ public class ch12_12_3 {
         Boolean noError = true;
 
         do {
-            System.out.print("Enter the index of the element you want to see: ");
+            System.out.print("Enter the index of the element you want to see (0-99): ");
             int userIndex = input.nextInt();
             try {
                 System.out.println("The element at index " + userIndex + " is " + randomInts[userIndex]);
